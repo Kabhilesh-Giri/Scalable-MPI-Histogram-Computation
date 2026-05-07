@@ -4,7 +4,7 @@ Parallel histogram computation in **C** and **OpenMPI** for distributed-memory s
 
 The benchmark results show the main distributed-systems tradeoff: adding more MPI processes can increase communication and synchronization overhead faster than it reduces local computation time.
 
-## Recruiter Snapshot
+## Project Overview
 
 | Area | Summary |
 | --- | --- |
@@ -41,7 +41,7 @@ The 32-bin runs were faster than the 128-bin runs at the same process count beca
 | Setup | Nodes | Tasks per Node | Total MPI Processes | Time Consumed (s) |
 | --- | ---: | ---: | ---: | ---: |
 | Shared-memory intensive | 1 | 8 | 8 | 0.151507 |
-| Communication intensive | 8 | 1 | 8 | 0.224762 |
+| Distributed-memory intensive | 8 | 1 | 8 | 0.224762 |
 
 With the same total number of MPI processes, the 8-node distributed-memory run was about 48% slower than the 1-node shared-memory run. This highlights the cost of network communication and cross-node reduction even when compute parallelism is held constant.
 
